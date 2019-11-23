@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dXm-NO-7c9" customClass="LoadingCollectionViewCell" customModule="Marvel_Character" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="65"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="149" height="65"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rxw-ug-dJQ">
+                        <rect key="frame" x="0.0" y="0.0" width="149" height="65"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bkl-fz-OpL">
+                                <rect key="frame" x="0.0" y="0.0" width="149" height="65"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8Gm-R9-W4Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="149" height="31"/>
+                                        <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzr-GI-ayd">
+                                        <rect key="frame" x="0.0" y="31" width="149" height="34"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapRetryButtonWithSender:" destination="dXm-NO-7c9" eventType="touchUpInside" id="XuE-gr-49W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bkl-fz-OpL" secondAttribute="trailing" id="1a3-lP-zfr"/>
+                            <constraint firstItem="Bkl-fz-OpL" firstAttribute="top" secondItem="Rxw-ug-dJQ" secondAttribute="top" id="R65-FE-e4V"/>
+                            <constraint firstItem="Bkl-fz-OpL" firstAttribute="leading" secondItem="Rxw-ug-dJQ" secondAttribute="leading" id="Yaq-UH-vh4"/>
+                            <constraint firstAttribute="bottom" secondItem="Bkl-fz-OpL" secondAttribute="bottom" id="f4b-xV-JWf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Rxw-ug-dJQ" secondAttribute="bottom" id="Q2V-R1-Faq"/>
+                <constraint firstAttribute="trailing" secondItem="Rxw-ug-dJQ" secondAttribute="trailing" id="QhQ-i4-Ypi"/>
+                <constraint firstItem="Rxw-ug-dJQ" firstAttribute="top" secondItem="dXm-NO-7c9" secondAttribute="top" id="cxM-dB-L1y"/>
+                <constraint firstItem="Rxw-ug-dJQ" firstAttribute="leading" secondItem="dXm-NO-7c9" secondAttribute="leading" id="nBB-ds-Q63"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Btm-3G-Pl0"/>
+            <size key="customSize" width="149" height="65"/>
+            <connections>
+                <outlet property="activityIndicator" destination="8Gm-R9-W4Z" id="1Mg-Am-vqt"/>
+                <outlet property="messageButton" destination="Zzr-GI-ayd" id="QIp-ka-RFu"/>
+            </connections>
+            <point key="canvasLocation" x="203.62318840579712" y="113.50446428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>
